@@ -71,3 +71,20 @@ document.getElementById("pentagon-btn").addEventListener("click", function () {
 
   setArea(pentagonTitle, area);
 });
+
+// Ellipse
+
+document.getElementById("ellipse-btn").addEventListener("click", function () {
+  serialNO += 1;
+
+  const inputValueA = inputValue("ell-input-a");
+  const inputValueB = inputValue("ell-input-b");
+
+  const PI = 3.14;
+
+  const area = (PI * inputValueA * inputValueB).toFixed(2);
+
+  const ellipseTitle = geometryTitleName("ell-title");
+
+  setArea(ellipseTitle, area);
+});
