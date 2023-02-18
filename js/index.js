@@ -10,30 +10,33 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
     return alert("Sorry,,, Please Input Valid Number");
   }
 
-  const area = 0.5 * inputValueB * inputValueH;
+  const area = trpGeometryCal(inputValueB, inputValueH);
   const triangleTitle = geometryTitleName("tri-title");
 
   setArea(triangleTitle, area);
 });
 
-
-
-
-
-
-
 // Utility function
 
+// input Field get function
 function inputValue(inputFieldId) {
   const inputValueGet = document.getElementById(inputFieldId).value;
   return inputValueGet;
 }
 
+// Title Get function
 function geometryTitleName(titleName) {
   const titleNameGet = document.getElementById(titleName).innerText;
   return titleNameGet;
 }
 
+// Triangle , Rhombus , Pentagon Calculation 
+function trpGeometryCal(inputA, inputB) {
+  const cal = 0.5 * inputA * inputB;
+  return cal;
+}
+
+// Area Set function
 function setArea(titleName, areaCal) {
   const tbodyContainer = document.getElementById("tbody-container");
   const trTag = document.createElement("tr");
