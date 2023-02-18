@@ -43,3 +43,10 @@ function setArea(titleName, areaCal) {
 
   tbodyContainer.appendChild(trTag);
 }
+
+function bgColorCard(bgColor) {
+  const bgColorSet = document.getElementById(bgColor);
+  let color = "#";
+  color += Math.random().toString(16).slice(2, 8);
+  bgColorSet.style.backgroundColor = color;
+}

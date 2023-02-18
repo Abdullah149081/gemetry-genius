@@ -1,14 +1,12 @@
 // Triangle
 document.getElementById("triangle-btn").addEventListener("click", function () {
-  serialNO += 1;
-
   const inputValueB = inputValue("input-tri-b");
   const inputValueH = inputValue("input-tri-h");
 
   if (inputValueB == "" || inputValueH == "" || isNaN(inputValueB) || isNaN(inputValueH) || inputValueB <= 0 || inputValueH <= 0) {
     return alert("Sorry,,, Please Input Valid Number");
   }
-
+  serialNO += 1;
   const area = trpGeometryCal(inputValueB, inputValueH);
   const triangleTitle = geometryTitleName("tri-title");
 
@@ -17,14 +15,13 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
 
 // rectangle
 document.getElementById("rectangle-btn").addEventListener("click", function () {
-  serialNO += 1;
-
   const inputValueW = inputValue("rec-input-w");
   const inputValueI = inputValue("rec-input-I");
 
   if (inputValueW == "" || inputValueI == "" || isNaN(inputValueW) || isNaN(inputValueI) || inputValueW <= 0 || inputValueI <= 0) {
     return alert("Sorry,,, Please Input Valid Number");
   }
+  serialNO += 1;
 
   const area = rpGeometryCal(inputValueW, inputValueI);
   const rectangleTitle = geometryTitleName("rec-title");
@@ -87,4 +84,30 @@ document.getElementById("ellipse-btn").addEventListener("click", function () {
   const ellipseTitle = geometryTitleName("ell-title");
 
   setArea(ellipseTitle, area);
+});
+
+// Card BG color Change
+// triangle bg
+document.getElementById("bg-triangle").addEventListener("mouseenter", function () {
+  bgColorCard("bg-triangle");
+});
+// bg rectangle
+document.getElementById("bg-rectangle").addEventListener("mouseenter", function () {
+  bgColorCard("bg-rectangle");
+});
+//  bg-parallelogram
+document.getElementById("bg-parallelogram").addEventListener("mouseenter", function () {
+  bgColorCard("bg-parallelogram");
+});
+// bg-rhombus
+document.getElementById("bg-rhombus").addEventListener("mouseenter", function () {
+  bgColorCard("bg-rhombus");
+});
+// bg-pentagon
+document.getElementById("bg-pentagon").addEventListener("mouseenter", function () {
+  bgColorCard("bg-pentagon");
+});
+// bg-ellipse
+document.getElementById("bg-ellipse").addEventListener("mouseenter", function () {
+  bgColorCard("bg-ellipse");
 });
