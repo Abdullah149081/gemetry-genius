@@ -7,5 +7,71 @@
     <title>Question and Answer</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1 class="text-center font-bold text-4xl lg:text-6xl mt-5">Question and Answer</h1>
+    </header>
+
+    <main>
+      <section class="mt-6 lg:mt-32 lg:px-16 px-3 pb-14">
+        <!-- grid  -->
+        <div class="grid lg:grid-cols-3 gap-6">
+          <!-- Q:1  -->
+          <div class="space-y-4 border-2 p-4 border-dotted border-lime-500">
+            <h2 class="lg:text-2xl font-bold">1.What is DOM and what is the purpose of DOM?</h2>
+            <p class="text-gray-700 font-medium lg:text-xl">
+              <span class="text-pink-500">DOM full form:Document Object Model. </span> <br />
+              <span class="text-purple-500">Document:</span> It treats all the HTML documents. <br />
+              <span class="text-purple-500">Object:</span> All tags inside HTML become a DOM element.Element:html,head,body,button,etc.<br />
+              <span class="text-purple-500">Model:</span> Full Layout Structure. <br />
+              It allows JavaScript to manipulate, structure, and style website. Also, DOM can create website that can be customized by the user and then change the page layout without refreshing. DOM
+              can drag, move and delete elements.
+            </p>
+          </div>
+          <!-- Q:2  -->
+          <div class="space-y-4 border-2 p-4 border-dotted border-lime-500">
+            <h2 class="lg:text-2xl font-bold">2.How will you select HTML elements using DOM? Name the DOM methods.</h2>
+            <p class="text-gray-700 font-medium lg:text-xl">
+              Using JavaScript we can easily select and modify any HTML tag or element .JavaScript gives us several ways to select HTML tags or DOM elements. <br />
+              <br />
+
+              Five Ways Of Selecting HTML Tag Or HTML DOM Elements In Javascript <br />
+
+              1.getElementsByTagName() <br />
+              2.getElementsByClassName() <br />
+              3.getElementById() <br />4.querySelector() <br />
+              5.querySelectorAll()
+
+              <br />
+              <br />
+              <span class="text-red-500">Note:</span> The querySelectorAll() , querySelector() using this method we can select HTML DOM element exactly the same as CSS. This means the method can
+              accept tag name, class name (.class-name), id name (#id-name), attribute etc.
+            </p>
+          </div>
+          <!-- Q:3  -->
+          <div class="space-y-4 border-2 p-4 border-dotted border-lime-500">
+            <h2 class="lg:text-2xl font-bold">3.What is event bubble?</h2>
+            <p class="text-gray-700 font-medium lg:text-xl">
+              Event bubbling is the propagation of an event that stops from its origin up to the root element. That is, when a user clicks on a button on the page, the event handler under that button
+              propagates the event to its parent, its parent, its parent, and so on to the root element Html. The event notifies all elements above it that someone has clicked on it. Use the
+              stopPropagation() method to prevent bubbling.
+            </p>
+          </div>
+          <!-- Q:4  -->
+          <div class="space-y-4 border-2 p-4 border-dotted border-lime-500">
+            <h2 class="lg:text-2xl font-bold">4.What is a callback function and why will you use it?</h2>
+            <p class="text-gray-700 font-medium lg:text-xl">
+              In JavaScript, callback function is a function that is passed as an argument to second function. The function that receives the callback decides when to execute the callback <br />
+              <br />
+              Callback function can be written in two ways <br />
+              1. As Anonymous Function. <br />
+              2. As a regular function. <br />
+
+              It optimizes the code, no need to write the same code multiple times
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
