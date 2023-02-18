@@ -31,3 +31,31 @@ document.getElementById("rectangle-btn").addEventListener("click", function () {
 
   setArea(rectangleTitle, area);
 });
+
+// parallelogram
+
+document.getElementById("parallelogram-btn").addEventListener("click", function () {
+  serialNO += 1;
+
+  const inputValueB = inputValue("para-input-b");
+  const inputValueH = inputValue("para-input-h");
+
+  const area = rpGeometryCal(inputValueB, inputValueH);
+  const parallelogramTitle = geometryTitleName("parall-title");
+
+  setArea(parallelogramTitle, area);
+});
+
+// rhombus
+document.getElementById("rhombus-btn").addEventListener("click", function () {
+  serialNO += 1;
+
+  const inputValueB = inputValue("rho-input-d1");
+  const inputValueH = inputValue("rho-input-d2");
+
+  const area = trpGeometryCal(inputValueB, inputValueH);
+  const rhombusTitle = geometryTitleName("rho-title");
+
+  setArea(rhombusTitle, area);
+});
+

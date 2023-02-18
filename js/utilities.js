@@ -19,13 +19,13 @@ function geometryTitleName(titleName) {
 
 // Triangle , Rhombus , Pentagon Calculation
 function trpGeometryCal(inputA, inputB) {
-  const cal = 0.5 * inputA * inputB;
+  const cal = (0.5 * inputA * inputB).toFixed(2);
   return cal;
 }
 
 // Rectangle , Parallelogram calculation
 function rpGeometryCal(inputA, inputB) {
-  const Calculation = inputA * inputB;
+  const Calculation = (inputA * inputB).toFixed(2);
   return Calculation;
 }
 
