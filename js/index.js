@@ -50,12 +50,24 @@ document.getElementById("parallelogram-btn").addEventListener("click", function 
 document.getElementById("rhombus-btn").addEventListener("click", function () {
   serialNO += 1;
 
-  const inputValueB = inputValue("rho-input-d1");
-  const inputValueH = inputValue("rho-input-d2");
+  const inputValueD1 = inputValue("rho-input-d1");
+  const inputValueD2 = inputValue("rho-input-d2");
 
-  const area = trpGeometryCal(inputValueB, inputValueH);
+  const area = trpGeometryCal(inputValueD1, inputValueD2);
   const rhombusTitle = geometryTitleName("rho-title");
 
   setArea(rhombusTitle, area);
 });
 
+// Pentagon
+document.getElementById("pentagon-btn").addEventListener("click", function () {
+  serialNO += 1;
+
+  const inputValueP = inputValue("pen-input-p");
+  const inputValueB = inputValue("pen-input-b");
+
+  const area = trpGeometryCal(inputValueP, inputValueB);
+  const pentagonTitle = geometryTitleName("penta-title");
+
+  setArea(pentagonTitle, area);
+});
