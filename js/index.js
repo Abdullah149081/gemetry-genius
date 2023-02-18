@@ -1,5 +1,4 @@
-let serialNO = 0;
-
+// Triangle
 document.getElementById("triangle-btn").addEventListener("click", function () {
   serialNO += 1;
 
@@ -16,37 +15,19 @@ document.getElementById("triangle-btn").addEventListener("click", function () {
   setArea(triangleTitle, area);
 });
 
-// Utility function
+// rectangle
+document.getElementById("rectangle-btn").addEventListener("click", function () {
+  serialNO += 1;
 
-// input Field get function
-function inputValue(inputFieldId) {
-  const inputValueGet = document.getElementById(inputFieldId).value;
-  return inputValueGet;
-}
+  const inputValueW = inputValue("rec-input-w");
+  const inputValueI = inputValue("rec-input-I");
 
-// Title Get function
-function geometryTitleName(titleName) {
-  const titleNameGet = document.getElementById(titleName).innerText;
-  return titleNameGet;
-}
+  if (inputValueW == "" || inputValueI == "" || isNaN(inputValueW) || isNaN(inputValueI) || inputValueW <= 0 || inputValueI <= 0) {
+    return alert("Sorry,,, Please Input Valid Number");
+  }
 
-// Triangle , Rhombus , Pentagon Calculation 
-function trpGeometryCal(inputA, inputB) {
-  const cal = 0.5 * inputA * inputB;
-  return cal;
-}
+  const area = rpGeometryCal(inputValueW, inputValueI);
+  const rectangleTitle = geometryTitleName("rec-title");
 
-// Area Set function
-function setArea(titleName, areaCal) {
-  const tbodyContainer = document.getElementById("tbody-container");
-  const trTag = document.createElement("tr");
-
-  trTag.innerHTML = `
-              <td>${serialNO}</td>
-              <td>${titleName}</td>
-              <td>${areaCal}cm<sup>2</sup></td>
-              <td><button class="btn lowercase">convert to m <sup>2</sup></button></td>
-  `;
-
-  tbodyContainer.appendChild(trTag);
-}
+  setArea(rectangleTitle, area);
+});
